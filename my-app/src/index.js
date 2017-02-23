@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 import App from './App';
 import './index.css';
 
-import TileList from './TileList.js'
-import TilePage from './TilePage.js'
-import OtherPage from './OtherPage.js'
+import TileList from './TileList'
+import TilePage from './TilePage'
+import OtherPage from './OtherPage'
 
 
 const media = [{
@@ -39,10 +39,10 @@ const media = [{
 
 ReactDOM.render(
   //<TileList list={media}/>,
-  <Router history={browserHistory }>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="tilepage" name="tilepage" component={TilePage}></Route>
-      <Route path="otherpage" name="otherpage" component={OtherPage}></Route>
+      <Route path="/tilepage" name="tilepage" component={TilePage}></Route>
+      <Route path="/otherpage" name="otherpage" component={OtherPage}></Route>
     </Route>
   </Router>,
 
