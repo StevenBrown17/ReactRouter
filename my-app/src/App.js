@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 //import logo from './logo.svg';
 import slinky from './slinky.gif';
 import './App.css';
@@ -22,7 +23,8 @@ class App extends Component {
 
         <h1><Welcome name="Bob"/></h1>
         <p>
-          <TileList list={this.props.media}/>
+          <Link to="tilepage">TilePage  </Link>
+          <Link to="otherpage">Other Page</Link>
         </p>
       </div>
     );
